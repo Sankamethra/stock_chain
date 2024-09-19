@@ -1,0 +1,130 @@
+:root {
+    --primary-bg: #1a237e;
+    --secondary-bg: #4a148c;
+    --text-light: #FFFFFF;
+    --text-dark: #17153B;
+    --accent-blue: #2196F3;
+    --accent-purple: #9C27B0;
+}
+
+.notification-container {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, var(--primary-bg), var(--secondary-bg));
+    color: var(--text-light);
+    padding: 2rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+.notification-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.notification-content h1 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.notification-content > p {
+    color: #e0e0e0;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.notification-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.notification-item {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notification-item h3 {
+    color: var(--text-light);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: var(--accent-blue);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.sample-button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--accent-purple);
+    color: var(--text-light);
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sample-button:hover {
+    background-color: #7B1FA2;
+
+}
